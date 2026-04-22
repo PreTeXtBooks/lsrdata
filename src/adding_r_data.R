@@ -5,9 +5,25 @@ load( "data/aflsmall.Rdata" )
 
 # 2. Look in the Environment to see if it's there
 
-# 3. If it is a vector/numeric/fatcor/etc (not a data frame), then set as a data frame
+# 3. If it is a vector/numeric/factor/etc (not a data frame), then set as a data frame
 class(afl.finalists)
 afl.finalists <- data.frame(afl.finalists)
 
 # 4. Add it in! E.g., if it's afl.finalists
 usethis::use_data(afl.finalists)  # saves to data/my_dataset.rda
+
+
+# load( "data/aflsmall.Rdata" )
+
+load( "data/zeppo.Rdata" )
+
+grades <- data.frame(grades)
+
+usethis::use_data(grades)  # saves to data/my_dataset.rda
+
+booksales2 <- read.csv("data/booksales2.csv")
+usethis::use_data(booksales2)  # saves to data/my_dataset.rda
+
+
+
+
